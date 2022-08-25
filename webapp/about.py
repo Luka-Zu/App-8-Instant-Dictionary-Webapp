@@ -18,5 +18,4 @@ class About:
         return wp
 
 
-jp.Route(About.path, About.serve)
-jp.justpy(port=8001)
+
