@@ -1,8 +1,9 @@
 import justpy as jp
 from webapp.lay import DefaultLayout
+from webapp import page
 
 
-class About:
+class About(page.Page):
     path = '/about'
 
     def serve(self):
