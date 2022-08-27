@@ -18,6 +18,17 @@ class Home:
 
         drawer = jp.QDrawer(a=layout, show_if_above=True, v_model="left",
                             bordered=True)
+        scroller = jp.QScrollArea(a=drawer, classes="fit")
+        qlist = jp.QList(a=scroller)
+
+        a_classes = "p-2 m-2 text-lg text-blue-400 hover:text-blue-700"
+        jp.A(a=qlist, text="home", href="/", classes=a_classes)
+        jp.Br(a=qlist)
+        jp.A(a=qlist, text="dictionary", href="/dictionary", classes=a_classes)
+        jp.Br(a=qlist)
+        jp.A(a=qlist, text="about", href="/about", classes=a_classes)
+        jp.Br(a=qlist)
+
         jp.QBtn(a=toolbar, dense=True, flat=True, round=True, icon="menu",
                 click=cls.move_drawer, drawer=drawer)
 
